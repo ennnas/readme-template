@@ -1,26 +1,46 @@
 # Product Name
 > Short blurb about what your product does.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+[![Python 3.7](https://img.shields.io/badge/Python-3.7-green.svg)](https://shields.io/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 One to two paragraph statement about your product and what it does.
 
 ![](header.png)
 
-## Installation
+## Development setup
 
-OS X & Linux:
+You need to install the following software:
 
-```sh
-npm install my-crazy-module --save
+* Python ≥ 3.7 (older versions are not supported)
+* [poetry](https://python-poetry.org/) ≥ 1.0
+
+### Poetry installation
+To install and configure `poetry` run 
+```shell script
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
+poetry config virtualenvs.in-project true
 ```
 
-Windows:
+## Installation
 
-```sh
-edit autoexec.bat
+First, to install all the required dependencies run
+```shell script
+poetry install
+```
+
+You now have access to these entry points (executables) in your virtual environment:
+
+* `entrypoint`: description of what it does 
+* `another_entrypoint`: description of what it does
+
+All these entry points accept multiple options. To obtain documentation for any one of them, run it with the `-h` flag.
+Example:
+
+```bash
+$ entrypoint -h
+
+PUT THE SHELL OUTPUT HERE
 ```
 
 ## Usage example
@@ -29,24 +49,11 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
 * 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+    * FIX: Crash when calling `baz()`
 * 0.1.0
     * The first proper release
     * CHANGE: Rename `foo()` to `bar()`
@@ -55,7 +62,7 @@ npm test
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Ennio Nasca – [@YourTwitter](https://twitter.com/dbader_org) – nascae@example.com
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
@@ -63,16 +70,12 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 ## Contributing
 
+Tho contribute to this project follow this steps:
+
 1. Fork it (<https://github.com/yourname/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+
